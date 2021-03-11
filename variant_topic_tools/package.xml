@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>variant_topic_tools</name>
+  <version>0.1.6</version>
+  <description>Topic tools for treating messages as variant types.</description>
+  <author email="ralf.kaestner@gmail.com">Ralf Kaestner</author>
+  <maintainer email="sbachmann@anybotics.com">Samuel Bachmann</maintainer>
+  <maintainer email="rdiethelm@anybotics.com">Remo Diethelm</maintainer>
+  <license>GNU Lesser General Public License (LGPL)</license>
+  <url>http://github.com/anybotics/variant</url>
+
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+  <build_depend>variant_msgs</build_depend>
+
+  <depend>rclcpp</depend>
+  <depend>rclcpp_components</depend>
+  <depend>message_filters</depend>
+
+  <test_depend>geometry_msgs</test_depend>
+  <test_depend>std_msgs</test_depend>
+  <test_depend>gtest</test_depend>
+
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

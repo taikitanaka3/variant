@@ -1,5 +1,30 @@
 # variant
 
+# TODO
+
+### A. replace ros packages to ros2 packages 
+ex)
+- use ros2 subscriber & publisher
+- replace "rclcpp/rclcpp.hpp" instead of "ros/ros.h"
+- replace "rclcpp/time.hpp" instead of "ros/time.h"
+
+Note: Some Packages change / deleted   in ros2. Check if it's exist in following link
+https://docs.ros2.org/dashing/api/rclcpp/classrclcpp_1_1Node.html
+
+### B. repalce .h files to .hpp files
+ex)
+- Exception.h to Exception.hpp
+
+### C. apply Qos setting to PubSub
+ex)
+```
+sub_a =
+    create_subscription<AMessage>(
+    "/a_topic", rclcpp::QoS{1},
+    std::bind(&AClass::ACallback, this, std::placeholders::_1));
+```
+
+
 ## Synopsis
 
 Topic tools for treating ROS messages as type-erased variants.
